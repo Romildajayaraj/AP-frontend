@@ -81,3 +81,7 @@ axios.get(`${API}/api/admin/dashboard`)
   "password": "12345678"
 }
 ```
+## 🌐 Live Demo
+
+- Frontend: https://biddingnest.netlify.app/
+- Backend API: https://ap-backend-l7u7.onrender.com
