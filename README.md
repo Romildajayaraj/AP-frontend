@@ -1,64 +1,83 @@
-Auction Platform – Frontend (React)
+# 🌐 Auction System Frontend
 
-A responsive and dynamic user interface for the Auction Platform built using React. This frontend allows users to browse auctions, place bids, and manage their activities seamlessly.
+This is the frontend for the Auction System built using React (Vite). It connects to the backend API to manage users, auctions, and admin dashboard.
 
-🚀 Features
+---
 
-👤 User Interface
+## 🚀 Tech Stack
 
-User Registration & Login UI 🔐
-View all auctions
-Search, filter & sort auctions
-Place bids on items
-View "My Bids"
+* React.js (Vite)
+* Axios
+* React Router
+* Tailwind CSS (if used)
 
-🛍️ Seller Interface
+---
 
-Create auction listings
-Manage auctions
-Track bids on items
+## 📁 Project Setup
 
-📊 Dashboard UI
+### 1. Navigate to client folder
 
-Auction statistics overview
-Active & closed auctions display
-
-🛠️ Tech Stack
-
-Framework: React.js
-Styling: Tailwind CSS
-Routing: React Router
-API Calls: Axios / Fetch
-
-📁 Folder Structure
-
-client/
-│
-├── src/
-│   ├── components/    # Reusable UI components
-│   ├── pages/         # Page-level components
-│   ├── hooks/         # Custom hooks
-│   ├── routes/        # Routing logic
-│   └── App.jsx
-
-⚙️ Installation & Setup
-
+```bash
 cd client
+```
+
+---
+
+### 2. Install dependencies
+
+```bash
 npm install
+```
+
+---
+
+### 3. Configure Environment Variables
+
+Create a `.env` file:
+
+```env
+VITE_API=http://localhost:5000
+VITE_AUCTION_API=http://localhost:5000/auction
+```
+
+---
+
+### 4. Run the frontend
+
+```bash
 npm run dev
+```
 
-🌐 API Integration
+App will run on:
 
-Make sure backend is running at:
+```
+http://localhost:5173
+```
 
-https://auctionplatform-backend.onrender.com
+---
 
-Update API base URL if deployed.
+## 🔗 API Usage
 
-✨ UI Highlights
+All API calls are made using:
 
-Responsive design 📱💻
-Grid-based auction layout
-Category filtering
-Pagination support
-Clean modern UI
+```js
+const API = import.meta.env.VITE_API;
+```
+
+Example:
+
+```js
+axios.post(`${API}/api/auth/login`, data)
+axios.get(`${API}/api/admin/dashboard`)
+```
+
+---
+
+## 🔐 Demo Login
+
+```json
+{
+  "email": "testuser@gmail.com",
+  "password": "12345678"
+}
+```
